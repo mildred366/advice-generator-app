@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --LCyan: hsl(193, 38%, 86%);
+    --NGreen: hsl(150, 100%, 66%);
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    /* margin-top: 60px; */
+    color: var(--LCyan);
+}
+
+.attribution a {
+    color: var(--NGreen);
+}
+
+.mainContainer {
+    margin: auto;
+    padding: 4rem 2.4rem 6.4rem 2.4rem;
+    width: 34.3rem;
+    background: var(--DGrayishBlue);
+    box-shadow: 3rem 5rem 8rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+#adviceQuote {
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: -0.0257143rem;
+    color: var(--LCyan);
+}
+
+#adviceId {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: var(--NGreen);
+    text-transform: uppercase;
+    padding-top: 0;
+}
+
+#button {
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    place-content: center;
+    background: var(--NGreen);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: -2rem;
+    left: 15rem;
+}
+
+#button:hover {
+    box-shadow: 0px 0px 40px #53ffaa;
+    transition: 0.4s;
+}
+
+body {
+    background-color: var(--DarkBlue);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card_advice {
+    margin-top: 1rem;
+    /* align-items: center; */
+}
+
+.card_divider {
+    margin-top: 1rem;
+}
+
+.card_divider--mobile {
+  display: none;
+}
+
+.card_button {
+  position: absolute;
+  /* bottom: -3.2rem; */
+  /* left: 14rem; */
+}
+
+
+
+@media (max-width: 768px) {
+
+  #button {
+    bottom: -2rem;
+    left: 10rem;
+}
+
+  .card_divider--desktop {
+    display: none;
+    /* margin-top: 4rem; */
+  }
+
+  .card_divider--mobile {
+    display: block;
+    margin-top: 4rem;
+  }
+
+  .card_advice {
+    margin-top: 2.4rem;
+  }
+
+  .mainContainer {
+    /* padding: 4.8rem 4.8rem 7.2rem 4.8rem; */
+    width: 24rem;
+  }
+
+  .advice-id {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.41rem;
+  }
+
+  .advice-quote {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: -0.03rem;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  color: var(--LCyan);
+}
+
+.attribution a {
+  color: var(--NGreen);
+}
